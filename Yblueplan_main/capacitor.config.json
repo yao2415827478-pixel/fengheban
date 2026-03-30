@@ -1,0 +1,8 @@
+{
+  "appId": "com.blueplan.app",
+  "appName": "布鲁计划",
+  "webDir": "dist",
+  "plugins": {
+    "AlipayPlugin": {}
+  }
+}

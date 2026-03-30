@@ -1,0 +1,55 @@
+// 响应工具函数
+
+function success(data = null) {
+  return {
+    success: true,
+    data
+  };
+}
+
+function error(code, message) {
+  return {
+    success: false,
+    error: {
+      code,
+      message
+    }
+  };
+}
+
+// 错误码定义
+const ErrorCodes = {
+  // 通用
+  INVALID_PARAMS: 'INVALID_PARAMS',
+  INTERNAL_ERROR: 'INTERNAL_ERROR',
+  
+  // 认证
+  UNAUTHORIZED: 'UNAUTHORIZED',
+  TOKEN_INVALID: 'TOKEN_INVALID',
+  
+  // 邀请码
+  INVITE_CODE_INVALID: 'INVITE_CODE_INVALID',
+  INVITE_CODE_EXPIRED: 'INVITE_CODE_EXPIRED',
+  INVITE_CODE_SELF_USE: 'INVITE_CODE_SELF_USE',
+  
+  // 支付
+  ORDER_NOT_FOUND: 'ORDER_NOT_FOUND',
+  ORDER_ALREADY_PAID: 'ORDER_ALREADY_PAID',
+  ORDER_PAYMENT_FAILED: 'ORDER_PAYMENT_FAILED',
+  
+  // 邀请关系
+  RELATION_NOT_FOUND: 'RELATION_NOT_FOUND',
+  RELATION_ALREADY_BOUND: 'RELATION_ALREADY_BOUND',
+  RELATION_ALREADY_ACTIVATED: 'RELATION_ALREADY_ACTIVATED',
+  
+  // 提现
+  WITHDRAW_AMOUNT_INVALID: 'WITHDRAW_AMOUNT_INVALID',
+  WITHDRAW_INSUFFICIENT_BALANCE: 'WITHDRAW_INSUFFICIENT_BALANCE',
+  WITHDRAW_TOO_FREQUENT: 'WITHDRAW_TOO_FREQUENT'
+};
+
+module.exports = {
+  success,
+  error,
+  ErrorCodes
+};

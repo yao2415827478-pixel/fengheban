@@ -1,0 +1,27 @@
+{
+  "name": "blueplan-backend",
+  "version": "1.0.0",
+  "description": "布鲁计划后端服务",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "init-db": "node scripts/init-db.js"
+  },
+  "dependencies": {
+    "@alicloud/dysmsapi20170525": "^4.5.0",
+    "@alicloud/openapi-client": "^0.4.15",
+    "@alicloud/tea-util": "^1.4.11",
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "pg": "^8.13.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

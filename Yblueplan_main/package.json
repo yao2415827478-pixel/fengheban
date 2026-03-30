@@ -1,0 +1,34 @@
+{
+  "name": "blue-plan-web",
+  "version": "1.0.0",
+  "description": "布鲁计划 - 戒色辅助Web应用",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "eslint src --ext .js,.vue",
+    "lint:backend": "eslint backend/src backend/scripts --ext .js",
+    "test": "vitest run",
+    "check": "npm run lint && npm run test && npm run build && npm run backend:check",
+    "backend:check": "node -e \"require('./backend/src/app'); console.log('backend-load-ok')\""
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "vue": "^3.5.28",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "eslint": "^10.1.0",
+    "eslint-plugin-vue": "^10.8.0",
+    "globals": "^17.4.0",
+    "sass": "^1.97.3",
+    "vite": "^5.4.21",
+    "vitest": "^4.1.2",
+    "vue-eslint-parser": "^10.4.0"
+  }
+}
